@@ -39,3 +39,10 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-api:latest
+
+        - name: Upload test report
+          uses: actions/upload-artifact@v4
+          with:
+            name: test-report
+            path: reports/
+
