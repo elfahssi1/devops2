@@ -2,10 +2,11 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches:          
+            - feature/dockerize-api3
   pull_request:
-    branches: [ "main" ]
-
+    branches: 
+          - feature/dockerize-api3
 jobs:
   ci:
     runs-on: ubuntu-latest
