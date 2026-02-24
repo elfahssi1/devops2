@@ -29,10 +29,10 @@ jobs:
         run: npm test || echo "No tests yet"
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-api:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-api:5 .
 
       - name: Login to registry
         run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-api:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-api:5
