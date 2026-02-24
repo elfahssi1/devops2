@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
+  res.json({ status: 'ok avec modafication' });
 });
 
 app.get('/hello', (req, res) => {
